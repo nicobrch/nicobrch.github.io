@@ -5,7 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils"
 
 import { ThemeProvider } from "@/components/themeProvider"
-import Navbar from "@/components/navbar/navbar";
+import Navbar from "@/components/navbar";
 
 const fontSans = FontSans({
   subsets: ["latin"],

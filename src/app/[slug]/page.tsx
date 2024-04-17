@@ -1,5 +1,24 @@
 import { CustomMDX } from "@/components/mdx";
 import { getBlogPosts } from "@/lib/content"
+import type { Metadata } from 'next';
+
+export async function generateMetadata({params}: any): Promise<Metadata | undefined> {
+  let post = getBlogPosts().find((post) => post.slug === params.slug);
+  if (!post) {
+    return;
+  }
+  return {
+    title: post.metadata.title,
+    description: post.metadata.description,
+    openGraph: {
+      title: post.metadata.title,
+      description: post.metadata.description,
+      publishedTime: post.metadata.publishedAt,
+      type: 'article',
+      url: `https://nicobrch.github.io/blog/${post.slug}`,
+    },
+  };
+}
 
 export async function generateStaticParams() {
   const posts = getBlogPosts();
@@ -15,7 +34,7 @@ export default function BlogPost({ params }: { params: { slug: string } }){
   }
 
   return (
-    <section className="px-8 max-w-2xl">
+    <section className="max-w-2xl mx-6">
       <h1 className="title font-medium text-2xl">
         {post.metadata.title}
       </h1>
