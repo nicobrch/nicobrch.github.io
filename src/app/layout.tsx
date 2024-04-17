@@ -13,8 +13,11 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: "nicobrch",
-  description: "Página personal",
+  title: {
+    default: 'nicobrch',
+    template: '%s | nicobrch',
+  },
+  description: "Developer, student. I like to build things.",
 };
 
 export default function RootLayout({
@@ -38,7 +41,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
         <Navbar/>
-        {children}
+        <main className="flex min-h-screen flex-col items-center justify-between p-16">
+          {children}
+        </main>
         </ThemeProvider>
       </body>
     </html>
