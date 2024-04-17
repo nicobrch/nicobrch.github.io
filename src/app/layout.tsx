@@ -4,8 +4,9 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils"
 
-import { ThemeProvider } from "@/components/themeProvider"
+import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar";
+import ScrollToTopButton from "@/components/scroll-top-button";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -41,9 +42,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
         <Navbar/>
-        <main className="flex min-h-screen flex-col items-center justify-between py-8">
+        <main className="flex flex-col items-center justify-between py-8">
           {children}
         </main>
+        <ScrollToTopButton/>
         </ThemeProvider>
       </body>
     </html>
