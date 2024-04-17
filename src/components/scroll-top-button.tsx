@@ -34,7 +34,7 @@ const ScrollToTopButton = () => {
     <Button
     variant="outline"
     size="icon"
-    className={`fixed bottom-4 right-4 rounded-full p-2 transition-all duration-200 ${isVisible ? "opacity-100" : "opacity-0"}`}
+    className={`fixed bottom-3 right-3 rounded-full p-2 transition-all duration-200 ${isVisible ? "opacity-100" : "opacity-0"}`}
     onClick={scrollToTop}
     >
       <ChevronUp className="h-[1.2rem] w-[1.2rem]"/>

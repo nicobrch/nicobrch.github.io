@@ -42,7 +42,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
         <Navbar/>
-        <main className="flex flex-col items-center justify-between py-8">
+        <main className="flex flex-col items-center justify-between py-8 mb-4">
           {children}
         </main>
         <ScrollToTopButton/>
