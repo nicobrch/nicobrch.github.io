@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 
 const components = {
   h1: (props: any) => (
-    <h1 {...props} className="text-2xl font-medium">
+    <h1 {...props} className="">
       {props.children}
     </h1>
   )

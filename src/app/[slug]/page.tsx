@@ -1,6 +1,8 @@
+import { Button } from "@/components/ui/button";
 import { CustomMDX } from "@/components/mdx";
 import { getBlogPosts } from "@/lib/content"
 import type { Metadata } from 'next';
+import DownloadButton from "@/components/download-button";
 
 export async function generateMetadata({params}: any): Promise<Metadata | undefined> {
   let post = getBlogPosts().find((post) => post.slug === params.slug);
@@ -41,8 +43,11 @@ export default function BlogPost({ params }: { params: { slug: string } }){
       <h2 className="title font-regular text-md">
         {post.metadata.description}
       </h2>
-      <div className="flex justify-between items-center mt-1 mb-8 text-sm">
+      <div className="flex justify-between items-center mt-1 mb-6 text-sm">
         Publicado: {post.metadata.publishedAt}
+        {post.metadata.download_url && (
+          <DownloadButton url={post.metadata.download_url}/>
+        )}
       </div>
       <article className="prose prose-quoteless prose-neutral dark:prose-invert">
         <CustomMDX source={post.content}/>
