@@ -4,8 +4,8 @@ import ThemeButton from "./themeButton"
 
 export default function Navbar() {
   return (
-    <div className="h-14 bg-neutral-50 dark:bg-neutral-950 shadow-lg flex items-center justify-between px-4 md:px-8 border-b border-neutral-200 dark:border-neutral-800">
-      <Link href="https://github.com/nicobrch">
+    <div className="h-14 bg-neutral-50 dark:bg-neutral-950 flex items-center justify-between px-4 md:px-8 border-b border-neutral-200 dark:border-neutral-800">
+      <Link href="/">
         <Avatar className="border h-8 w-8">
           <AvatarImage alt="@nicobrch" src="https://github.com/nicobrch.png" />
           <AvatarFallback>NC</AvatarFallback>

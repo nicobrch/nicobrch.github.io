@@ -5,7 +5,7 @@ export default function BlogHome() {
   const posts = getBlogPosts();
   
   return (
-    <section>
+    <>
       {posts.map((post) => (
         <PostItem
           key={post.slug}
@@ -16,6 +16,6 @@ export default function BlogHome() {
           description={post.metadata.description}
         />
       ))}
-    </section>
+    </>
   );
 }
