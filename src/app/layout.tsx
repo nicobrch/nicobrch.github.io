@@ -41,7 +41,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
         <Navbar/>
-        <main className="flex min-h-screen flex-col items-center justify-between py-12">
+        <main className="flex min-h-screen flex-col items-center justify-between py-8">
           {children}
         </main>
         </ThemeProvider>

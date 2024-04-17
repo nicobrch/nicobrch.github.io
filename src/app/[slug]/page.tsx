@@ -15,15 +15,15 @@ export default function BlogPost({ params }: { params: { slug: string } }){
   }
 
   return (
-    <section className="w-full px-8">
-      <h1 className="title font-medium text-2xl tracking-tighter">
+    <section className="px-8 max-w-2xl">
+      <h1 className="title font-medium text-2xl">
         {post.metadata.title}
       </h1>
-      <h2 className="title font-regular text-md tracking-tighter">
+      <h2 className="title font-regular text-md">
         {post.metadata.description}
       </h2>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        {post.metadata.publishedAt}
+      <div className="flex justify-between items-center mt-1 mb-8 text-sm">
+        Publicado: {post.metadata.publishedAt}
       </div>
       <article className="prose prose-quoteless prose-neutral dark:prose-invert">
         <CustomMDX source={post.content}/>
