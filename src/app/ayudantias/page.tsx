@@ -2,7 +2,7 @@ import { getBlogPosts } from "@/lib/content";
 import PostItem from "@/components/post-item";
 
 export const metadata = {
-  title: "blog | nicobrch",
+  title: "ayudantias",
   description: 'Textos, publicaciones, o cualquier cosa sobre ingeniería de software.',
 };
 
