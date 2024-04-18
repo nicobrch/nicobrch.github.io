@@ -5,8 +5,9 @@ import "./globals.css";
 import { cn } from "@/lib/utils"
 
 import { ThemeProvider } from "@/components/theme-provider"
-import Navbar from "@/components/navbar";
-import ScrollToTopButton from "@/components/scroll-top-button";
+import { ProgressBarProvider } from "@/components/progress-bar-provider";
+import Navbar from "@/components/nav/navbar";
+import ScrollToTopButton from "@/components/button/scroll-top-button";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     default: 'nicobrch',
     template: '%s | nicobrch',
   },
-  description: "Developer, student. I like to build things.",
+  description: "Engineer, student. I like to build things.",
 };
 
 export default function RootLayout({
@@ -41,11 +42,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-        <Navbar/>
-        <main className="flex flex-col items-center justify-between py-8 mb-4">
-          {children}
-        </main>
-        <ScrollToTopButton/>
+          <ProgressBarProvider/>
+          <Navbar/>
+          <main className="flex flex-col items-center justify-between py-8 mb-4">
+            {children}
+          </main>
+          <ScrollToTopButton/>
         </ThemeProvider>
       </body>
     </html>
