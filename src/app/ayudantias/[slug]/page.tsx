@@ -1,7 +1,7 @@
 import { CustomMDX } from "@/components/mdx";
 import { getBlogPosts } from "@/lib/content"
 import type { Metadata } from 'next';
-import DownloadButton from "@/components/download-button";
+import DownloadButton from "@/components/button/download-button";
 
 export async function generateMetadata({params}: any): Promise<Metadata | undefined> {
   let post = getBlogPosts().find((post) => post.slug === params.slug);

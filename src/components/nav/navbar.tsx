@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Menu } from "lucide-react"
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import ThemeButton from "@/components/theme-button"
+import ThemeButton from "@/components/button/theme-button"
 
 export default function Navbar() {
   return (

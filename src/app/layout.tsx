@@ -5,8 +5,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils"
 
 import { ThemeProvider } from "@/components/theme-provider"
-import Navbar from "@/components/navbar";
-import ScrollToTopButton from "@/components/scroll-top-button";
+import Navbar from "@/components/nav/navbar";
+import ScrollToTopButton from "@/components/button/scroll-top-button";
 
 const fontSans = FontSans({
   subsets: ["latin"],
