@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: 'nicobrch',
     template: '%s | nicobrch',
   },
-  description: "Developer, student. I like to build things.",
+  description: "Engineer, student. I like to build things.",
 };
 
 export default function RootLayout({

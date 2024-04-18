@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { CustomMDX } from "@/components/mdx";
 import { getBlogPosts } from "@/lib/content"
 import type { Metadata } from 'next';
