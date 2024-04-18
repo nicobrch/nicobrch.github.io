@@ -5,6 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils"
 
 import { ThemeProvider } from "@/components/theme-provider"
+import { ProgressBarProvider } from "@/components/progress-bar-provider";
 import Navbar from "@/components/nav/navbar";
 import ScrollToTopButton from "@/components/button/scroll-top-button";
 
@@ -41,11 +42,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-        <Navbar/>
-        <main className="flex flex-col items-center justify-between py-8 mb-4">
-          {children}
-        </main>
-        <ScrollToTopButton/>
+          <ProgressBarProvider/>
+          <Navbar/>
+          <main className="flex flex-col items-center justify-between py-8 mb-4">
+            {children}
+          </main>
+          <ScrollToTopButton/>
         </ThemeProvider>
       </body>
     </html>
