@@ -8,7 +8,7 @@ export const ProgressBarProvider = () => {
   return (
     <ProgressBar
       height="2px"
-      color={theme === "dark" ? "#f5f5f5" : "#171717"}
+      color="#737373"
       options={{ showSpinner: false }}
       shallowRouting
     />

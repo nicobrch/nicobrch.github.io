@@ -17,7 +17,7 @@ export default function BlogHome() {
   });
 
   return (
-    <section className="flex flex-col gap-">
+    <section className="flex flex-col gap-6">
       {posts.map((post) => (
         <PostItem
           key={post.slug}
