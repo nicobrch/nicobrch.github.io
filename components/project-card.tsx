@@ -33,12 +33,17 @@ export default function ProjectCard({ project }: { project: Project }) {
                     </div>
                 </CardContent>
                 <div className="md:col-span-2 relative min-h-[100px]">
-                    <Image
-                        src={project.image}
-                        alt={`Screenshot of ${project.title}`}
-                        fill
-                        className="object-cover"
-                    />
+                    <Link href={project.github}>
+                        <Image
+                            src={project.image}
+                            alt={`Screenshot of ${project.title}`}
+                            fill
+                            className="object-cover"
+                            style={{
+                                opacity: 0.8,
+                            }}
+                        />
+                    </Link>
                 </div>
             </div>
         </Card>

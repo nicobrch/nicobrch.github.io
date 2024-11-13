@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
     return (
-        <section className="max-w-3xl mx-auto text-center mb-48">
+        <section className="max-w-3xl mx-auto text-center mb-32 md:mb-48">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6 text-white">
                 Nicolás Chirino
             </h1>
