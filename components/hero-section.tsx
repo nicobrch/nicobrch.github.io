@@ -1,5 +1,6 @@
 import {Button} from "@/components/ui/button";
 import {Download, Mail} from "lucide-react";
+import Link from "next/link";
 
 export default function HeroSection() {
     return (
@@ -12,13 +13,17 @@ export default function HeroSection() {
                 Specialized in React, Next.js, and modern web technologies.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-                <Button variant="outline">
-                    <Mail className="mr-2 h-4 w-4"/>
-                    Contact Me
+                <Button variant="outline" asChild>
+                    <Link href="mailto:nicolas.brch@gmail.com">
+                        <Mail className="mr-2 h-4 w-4"/>
+                        Contact Me
+                    </Link>
                 </Button>
-                <Button>
-                    <Download className="mr-2 h-4 w-4"/>
-                    Download CV
+                <Button asChild>
+                    <Link href="/cv.pdf">
+                        <Download className="mr-2 h-4 w-4"/>
+                        Download CV
+                    </Link>
                 </Button>
             </div>
         </section>

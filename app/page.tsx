@@ -3,6 +3,7 @@ import GradientBackground from "@/components/gradient-bg";
 import SocialLinks from "@/components/social-links";
 import HeroSection from "@/components/hero-section";
 import FeaturedProjects from "@/components/featured-projects";
+import Footer from "@/components/footer";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
                 <SocialLinks />
                 <HeroSection />
                 <FeaturedProjects />
+                <Footer/>
             </div>
         </div>
     )
