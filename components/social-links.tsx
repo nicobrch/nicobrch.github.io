@@ -4,7 +4,7 @@ import {Github, Linkedin} from "lucide-react";
 
 export default function SocialLinks() {
     return (
-        <nav className="flex justify-center gap-4 mb-48 text-white">
+        <nav className="flex justify-center gap-4 mb-32 md:mb-48 text-white">
             <Button variant="ghost" size="icon" asChild>
                 <Link href="https://github.com/nicobrch">
                     <Github className="w-6 h-6"/>
