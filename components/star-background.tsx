@@ -27,7 +27,7 @@ const StarryBackground = () => {
             color: 0xFFFFFF,
             size: 0.1,
             transparent: true,  // Enable transparency
-            opacity: 0.25       // Set opacity to 50%
+            opacity: 0.35       // Set opacity to 50%
         });
 
         // Generate random star positions
