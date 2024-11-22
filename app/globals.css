@@ -44,3 +44,41 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.hover\:border-glow {
+    border: 2px solid transparent;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.hover\:shadow-glow:hover {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.6), 0 0 30px rgba(67, 56, 202, 0.4);
+}
+
+
+@keyframes gradient-move {
+    0% {
+        background-position: 45% 50%;
+    }
+    50% {
+        background-position: 55% 50%;
+    }
+    100% {
+        background-position: 45% 50%;
+    }
+}
+
+@keyframes gradient-flash {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.2);
+    }
+}
+
+.animate-gradient-flash {
+    background-size: 120% 120%;
+    animation: gradient-move 6s ease infinite, gradient-flash 3s ease infinite;
+}
+
